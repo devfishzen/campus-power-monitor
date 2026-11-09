@@ -48,6 +48,8 @@ cp .env.example .env
 | `MAIL_TO` | 收件邮箱 |
 | `ADMIN_PASSWORD` | 设置页登录密码，建议随机 16 位 |
 
+确认 `PROVIDER=ecode`（默认已经是），否则会用 mock 演示数据。
+
 不知道学校编号？按 [docs/capture-windows.md](docs/capture-windows.md) 抓一次包，看 URL 里的 `customerid`。
 房间名不确定也没关系：先填个大概，`livecheck` 报错时会列出账号绑定的房间。
 
@@ -96,7 +98,7 @@ docker compose up -d --build
 
 | 变量 | 默认 | 说明 |
 |---|---|---|
-| `PROVIDER` | `mock` | `ecode` 查真实数据；`mock` 演示 |
+| `PROVIDER` | `ecode` | `ecode` 查真实数据；`mock` 演示 |
 | `CHECK_CRON` | `30 8 * * *` | 每天 08:30 |
 | `THRESHOLD_KWH` | `30` | 低于该值告警 |
 | `ALERT_COOLDOWN_HOURS` | `20` | 同类告警冷却 |
